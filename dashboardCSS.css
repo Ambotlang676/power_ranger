@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui;
+    margin-inline: auto;
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.header {
+    position: fixed;
+    margin-left: 5.5rem;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: #111;
+}
+
+.sidenav{
+    background-color: #111;
+    height: 100%;
+    position: fixed;
+    padding-top: 100px;
+    width: 10rem;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.sidenav a{
+    position: relative;
+    left: 15px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.lOut{
+    bottom: -22rem;
+}
+
+/* Subgrid */
+
+img{
+    width: 10rem;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 6px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(350px, 1fr));
+    grid-gap: 1rem;
+    margin-left: 10rem; /* Same as width of the sidenav */
+    margin-top: 18%;
+    padding: 5%;
+}
+
+.box{
+    border: 1px solid #ccccccad;
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    background-color: hsl(0, 0%, 70%);
+
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+
+.box p{
+    word-wrap: break-word; /* Long detail */
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box button{
+    width: 100px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.sInfo{
+    top: 10px;
+}
+
+.price{
+    position: relative;
+    width: 100px;
+    margin: auto;
+    top: 10px;
+}
+
+/* End Subgrid */
